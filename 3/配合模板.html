@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+    <script type="x-template" id="aaa">
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</script>
+
+</head>
+<body>
+<div id="box">
+    <my-bbb></my-bbb>
+</div>
+<template id="aaaa">
+    <h1>标题</h1>
+    <ul>
+        <li v-for = val in arr>
+            {{val}}
+        </li>
+    </ul>
+</template>
+<script>
+    var vm = new Vue({
+        el:"#box",
+        components:{
+            'my-bbb':{
+                data(){
+                    return {
+                        msg:"welcome vue"
+                    }
+                },
+                methods:{
+                    show(){
+                        this.msg = "ahaha"
+                    }
+                },
+                template:'#aaa'
+            }
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

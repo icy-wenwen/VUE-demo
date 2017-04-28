@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="box">
+    {{a | date}}
+</div>
+<script>
+    Vue.filter('date',function (input) {
+        var oData = new Date(input);
+        return oData.getFullYear()+"-"+(oData.getMonth()+1)+'-'+oData.getDate()+'-'+oData.getHours()+':'+oData.getMinutes()+":"+oData.getSeconds();
+    })
+    var vm = new Vue({
+        data: {
+            a:Date.now()
+        },
+        methods:{
+            add:function () {
+                alert(101)
+            }
+        }
+    }).$mount("#box") /*手动挂载*/
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <ul>
+        <li v-for="value in arr">
+            {{value}} {{$index}}
+        </li>
+    </ul>
+    <br>
+    <ul>
+        <li v-for="item in json">
+            {{item}}  {{$index}}  {{$key}}
+        </li>
+    </ul>
+    <a href="">哈哈</a>
+    <ul>
+        <li v-for="(k,v) in json">
+            {{k}}    {{v}}  {{$index}}
+        </li>
+    </ul>
+</div>
+<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+<script>
+    var c = new Vue({
+        el:"#box",
+        data:{
+           arr:['apple','banana','orange'],
+           json:{
+               a:'apple',
+               b:'banana',
+               c:'orange'
+           }
+        }
+    })
+</script>
+</body>
+</html>

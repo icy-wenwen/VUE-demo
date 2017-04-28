@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <bbb></bbb>
+</div>
+<script>
+    var App=Vue.extend({
+        data(){      /*这个方式跟最下边的那个方式差不多*/
+            return {
+                msg:"我是解文超"
+            }
+        },
+        methods:{
+            change(){
+                this.msg = "heiheihei"
+            }
+        },
+        template:"<h3 @click='change()'>{{msg}}</h3>"
+    })
+    Vue.component('bbb',App)
+    var vm = new Vue({
+        el:"#box",
+        data:{
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

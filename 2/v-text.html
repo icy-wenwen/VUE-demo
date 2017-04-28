@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+<body>
+<div id="box">
+    <span>{{msg}}</span>
+    <span v-text="msg"></span>
+</div>
+<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script>
+     new  Vue({
+        el:"#box",
+        data:{
+            msg:"well"
+        }
+    })
+
+</script>
+</body>
+</html>

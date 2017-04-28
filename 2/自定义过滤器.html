@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="box">
+    {{a |toDou 1 2}}
+</div>
+<script>
+    Vue.filter('toDou',function (input,a,b) {
+        alert(a+","+b)
+        return input<10? "0"+input : input;
+    })
+    var vm = new Vue({
+        data: {
+           a:99
+        },
+        methods:{
+            add:function () {
+                alert(101)
+            }
+        }
+    }).$mount("#box") /*手动挂载*/
+</script>
+</body>
+</html>

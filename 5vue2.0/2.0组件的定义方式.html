@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.0.1/vue.min.js"></script>
+</head>
+<body>
+<div id="box">
+    {{msg}}
+    <my-aaa></my-aaa>
+</div>
+<template id="aaaa">
+    <div>
+        <h3>hhhh</h3><h4>eeeee</h4>
+    </div>
+</template>
+<script>
+  var Home =  {
+      template:"#aaa"
+  }
+    new Vue({
+        el:'#box',
+        data:{
+            msg:'vue2.0'
+        }
+    })
+</script>
+</body>
+</html>

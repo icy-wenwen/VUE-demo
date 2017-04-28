@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id="box">
+    {{a}}
+    {{b}}
+</div>
+<script>
+    var vm = new Vue({
+        data: {
+         a:111,
+         b:222
+        }
+    }).$mount("#box") /*手动挂载*/
+    vm.$watch('b',function () {
+        alert('发生变化了')
+    })
+    document.onclick = function () {
+        vm.a = 1;
+        vm.b = 2;
+    }
+</script>
+</body>
+</html>

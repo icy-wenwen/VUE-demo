@@ -1,0 +1,48 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+    <!--&lt;!&ndash;这是我们的View&ndash;&gt;-->
+<!--<div id="app">-->
+    <!--{{message}}-->
+<!--</div>-->
+<!--<script src="https://cdn.bootcss.com/vue/1.0.25/vue.min.js"></script>-->
+<!--<script>-->
+<!--//    这个是我们的model-->
+    <!--var exampleData = {-->
+        <!--message:"大家好"-->
+    <!--}-->
+<!--//    创建一个Vue实例或者ViewModle-->
+<!--//    它连接View与Model-->
+    <!--new Vue({-->
+        <!--el:"#app",-->
+        <!--data:exampleData-->
+    <!--})-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="app">{{msg}}</div>
+<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+<script>
+    var c = new Vue({
+       el:"#app",
+        data:{
+           msg:"大家好,我是解文超"
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.0.1/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/2.2.0/vue-router.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/animate.css/2.0/animate.min.css">
+    <style>
+        .router-link-active{
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div>
+        <router-link to="/home">主页</router-link>
+        <router-link to="/user">用户</router-link>
+    </div>
+    <router-view></router-view>
+</div>
+<script>
+    var Home={
+        template:'<h3>我是主页</h3>'
+    }
+    var User={
+        template:`
+            <div>
+            <h3>我是用户</h3>
+            <ul>
+                <li><router-link to="/user/username">某个用户</router-link></li>
+            </ul>
+            <div>
+                <router-view></router-view>
+            </div>
+            </div>
+`
+    }
+    var UserDetail = {
+        template:'<div>我是xx用户</div>'
+    };
+    //  配置路由
+    var routes=[
+        {path:'/home',component:Home},
+        {
+            path:'/user',component:User,
+            children:[
+                {path:'username',component:UserDetail}
+            ]
+
+        }
+    ]
+    //    生成路由实例
+    var router=new VueRouter({
+        routes
+    })
+    //    最后挂到vue上
+    new Vue({
+        router,
+        el:"#box"
+    })
+</script>
+</body>
+</html>

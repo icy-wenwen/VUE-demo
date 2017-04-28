@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<bod>
+    <div id="box">
+        <div @click="show2()">
+            <button @click.stop="show()">点击</button>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#box",
+            data:{
+
+            },
+            methods:{
+                show:function (ev) {
+                    alert(1)
+                },
+                show2:function () {
+                    alert(2)
+                }
+            }
+        })
+    </script>
+</bod>
+</html>

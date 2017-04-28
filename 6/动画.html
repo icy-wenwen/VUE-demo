@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/vue/2.0.1/vue.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>-->
+    <style>
+        p{
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+        .fade-enter-active {
+            transition: opacity 3s;
+            width: 300px;
+            height: 300px;
+
+        }
+        .fade-enter, .fade-leave-active {
+            opacity: 0;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <input type="button" value="点击显示隐藏" @click="show=!show">
+    <transition name="fade">
+        <p v-if="show">hello</p>
+    </transition>
+</div>
+<script>
+    new Vue({
+        el:'#box',
+        data:{
+            show:true
+        }
+    })
+</script>
+</body>
+</html>

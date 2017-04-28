@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="bower_components/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="box">
+    <bbb></bbb>
+</div>
+<script>
+    var App = Vue.extend({
+        template:'<h3>我是标题</h3>'
+    });
+    Vue.component("bbb",App)
+   var vm = new Vue({
+       el:"#box",
+       data:{
+
+       }
+   })
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

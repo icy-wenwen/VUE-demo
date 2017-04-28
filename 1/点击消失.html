@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    <input type="button" value="按钮" v-on:click="a=false">
+    <div style="width:100px;height:100px;background-color: red" v-show="a"></div>
+</div>
+<script src="https://cdn.bootcss.com/vue/1.0.26/vue.min.js"></script>
+<script>
+    var c = new Vue({
+        el:"#box",
+        data:{
+            arr:['apple','banana','orange'],
+            json:{
+                a:'apple',
+                b:'banana',
+                c:'orange'
+            }
+        },
+        methods:{
+            show:function () {
+                this.arr.push("tomato")
+            }
+        }
+    })
+</script>
+</body>
+</html>
